@@ -7,11 +7,16 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../../store/shopping-cart/cartSlice";
 
+import { useAlert } from 'react-alert'
+
 const ProductCard = (props) => {
   const { id, title, image01, price } = props.item;
   const dispatch = useDispatch();
+  
+  const alert = useAlert()
 
   const addToCart = () => {
+    alert.info(`Produto ${title} adicionado ao carrinho`);
     dispatch(
       cartActions.addItem({
         id,

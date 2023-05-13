@@ -1,13 +1,14 @@
 import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
-import logo from "../../assets/images/res-logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
 import "../../styles/header.css";
+
+import logo from "../../assets/images/LogoV2_6_8.png";
 
 const nav__links = [
   {
@@ -23,9 +24,13 @@ const nav__links = [
     path: "/cart",
   },
   {
+    display: "Saldo",
+    path: "/saldo",
+  },
+  {
     display: "Ajuda",
     path: "/contact",
-  },
+  }
 ];
 
 const Header = () => {
@@ -60,8 +65,7 @@ const Header = () => {
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
-            {/* <img src={logo} alt="logo" width={1}/> */}
-            <h5>NerdWay</h5>
+            <img src={logo} alt="logo"/> 
           </div>
 
           {/* ======= menu ======= */}

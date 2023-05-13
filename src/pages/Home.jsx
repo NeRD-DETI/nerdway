@@ -15,10 +15,11 @@ import foodCategoryImg01 from "../assets/images/hamburger.png";
 import foodCategoryImg02 from "../assets/images/pizza.png";
 import foodCategoryImg03 from "../assets/images/bread.png";
 
-import heroImg from "../assets/images/hero.jpg";
+import heroImg from "../assets/images/quieres.png";
 
 import ProductCard from "../components/UI/product-card/ProductCard.jsx";
 
+import { useAlert } from 'react-alert'
 
 const Home = () => {
   const [category, setCategory] = useState("ALL");

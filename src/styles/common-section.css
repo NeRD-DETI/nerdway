@@ -7,3 +7,22 @@
   background-position: center;
   padding: 80px 0px;
 }
+
+.money__section {
+  background: linear-gradient(#212245b2, #212245b2),
+    url("../assets/images/banner-money.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0px;
+}
+.help__section {
+  background: linear-gradient(#212245b2, #212245b2),
+    url("../assets/images/banner-help.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0px;
+}

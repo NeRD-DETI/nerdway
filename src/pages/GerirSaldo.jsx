@@ -6,7 +6,7 @@ import Helmet from "../components/Helmet/Helmet";
 
 import "../styles/checkout.css";
 
-const Checkout = () => {
+const GerirSaldo = () => {
   const [enterName, setEnterName] = useState("");
   const [enterEmail, setEnterEmail] = useState("");
   const [enterNumber, setEnterNumber] = useState("");
@@ -36,38 +36,33 @@ const Checkout = () => {
   };
 
   return (
-    <Helmet title="Checkout">
-      <CommonSection title="Checkout" />
+    <Helmet title="Gerir Saldo">
+      <CommonSection title="Gerir Saldo" />
       <section>
         <Container>
           <Row>
 
-            <Col lg="12" md="6">
-              <div className="checkout__bill">
-                <h6 className="d-flex align-items-center justify-content-between mb-3">
-                  Saldo: <span>${cartTotalAmount}</span>
-                </h6>
-                <h6 className="d-flex align-items-center justify-content-between mb-3">
-                  Preço: <span>${shippingCost}</span>
-                </h6>
-                <div className="checkout__total">
-                  <h5 className="d-flex align-items-center justify-content-between">
-                    Saldo Restante: <span>${totalAmount}</span>
-                  </h5>
-                </div>
-              </div>
+            <Col lg="8" md="6">
+              <p> Adicionar saldo </p> 
+              <input type="number" min="0.01" max="50.00" step="0.01" /> 
+            </Col>
+            <Col lg="4" md="6">
+              <p> Saldo Atual</p> 
+              <input type="number" min="0.01" max="50.00" step="0.01" /> 
             </Col>
           </Row>
           <Row>
             <Col lg="12" md="6">
-            <div className="cart__page-btn">
-                  <button className="addTOCart__btn me-4">
-                    Cancel
-                  </button>
-                  <button className="addTOCart__btn">
-                   Pay
-                  </button>
-                </div>
+              <div className="cart__page-btn">
+                <button className="addTOCart__btn">
+                  Pay
+                </button>
+
+                <button className="addTOCart__btn me-4">
+                  Cancel
+                </button>
+
+              </div>
             </Col>
           </Row>
         </Container>
@@ -76,4 +71,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default GerirSaldo;
